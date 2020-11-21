@@ -34,15 +34,9 @@ const FilmInfo = styled.ul`
 
 export default function Character(props) {
 
-const [charData, setCharData] = useState([]);
+    const {charData} = props
 
-useEffect(() => {
-
-axios.get('https://swapi.dev/api/people')
-                    .then(res => setCharData(res.results))
-                    .catch(err => console.log("Something went wrong!", err))
-
-}, [])
+    console.log("charData", charData)
 
 return (
     <Container>
